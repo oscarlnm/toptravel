@@ -1,0 +1,133 @@
+#form_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+
+  #form_text {
+    flex: 1;
+    border: 2px solid $color_3;
+    h3 {
+      text-align: center;
+      padding: 20px 0;
+      background: $color_3;
+      color: $color_secundario;
+    }
+
+    form {
+      #datos {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 0px;
+      }
+
+      * {
+        // clear form inputs
+        background: none;
+        border: none;
+        margin-bottom: 20px;
+        padding: 10px 0;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-bottom: 2px solid $color_secundario !important;
+        outline: none !important;
+      }
+
+      input[name="tarifa"] {
+        accent-color: $color_secundario !important;
+      }
+
+      h5 {
+        text-align: center;
+        margin: 0;
+      }
+
+      #tarifas {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+
+        div {
+          * {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      #precio_pago {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        background: $color_3;
+      }
+
+      #terms_box {
+        display: flex;
+        justify-content: center;
+
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        #terminos {
+          margin-right: 10px;
+        }
+
+        label a {
+          display: inline-block;
+        }
+      }
+
+      #btn_registro {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        input:focus {
+          border: none !important;
+        }
+      }
+
+      input[type="submit"] {
+        padding: 20px;
+        margin: 0;
+        background: $color_layout;
+        color: $color_secundario;
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        &:hover {
+          background: $color_slider;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  #map {
+    flex: 1;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+    }
+  }
+}
+
+@include mix_tablet_md {
+  #form_box {
+    flex-direction: row-reverse;
+    #map {
+      iframe {
+        height: 100%;
+      }
+    }
+  }
+}

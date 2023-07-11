@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- SPLIDE -->
+	<!-- <link rel="stylesheet" href="vendor/splide/dist/css/splide.min.css"> -->
+	<link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+	<!-- RESET -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- BURGER -->
+	<link rel="stylesheet" href="css/burger.css">	
+	<!-- CUSTOM -->
+	<link rel="stylesheet" href="scss/style.css">
+	<!-- AWESOME BRANDS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<title>Top Travel</title>
+</head>
+
+<body>
+	<!-- GRID CONTAINER -->
+	<div id="grid_container">
+
+		<!-- HEADER CONTAINER -->
+		<header id="header_container">
+
+			<div class="container">
+
+				<div id="header_container_box">
+					<!-- LOGO -->
+					<div id="logo_box">
+						<a href="#slider_main"><img src="img/logo.png"></a>
+					</div>
+					<!-- NAV -->
+					<nav id="nav_container">
+						<div id="menu_box">
+							<ul id="menu">
+								<li><a href="#slider_services">Destinos</a></li>
+								<li><a href="#form">Contacto</a></li>
+							</ul>
+							<div id="menu_btn">
+								<div id="burger"></div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		<!-- MAIN CONTAINER -->
+		<main id="main_container">
+			
+			<section id="slider_main">
+				<div id="slider">
+					<div id="image_slider" class="splide">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<div class="splide__slide" style="width: 100%; padding-left: 40px; padding-right: 40px; margin-right: auto; margin-left: auto; max-width: 1280px;">
+									<img class="mySlides" src="img/holidays.jpg" style="width:1200px; height:500px; background-position: center; background-size: cover;">
+									<img class="mySlides" src="img/bali.jpg" style="width:1200px; height:500px; background-position: center; background-size: cover;">
+									<img class="mySlides" src="img/familia.jpg" style="width:1200px; height:500px; background-position: center; background-size: cover;">
+									<img class="mySlides" src="img/playuki.jpg" style="width:1200px; height:500px; background-position: center; background-size: cover;">
+								  
+									<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+									<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+								</div>
+								  
+								  <script>
+								  var slideIndex = 1;
+								  showDivs(slideIndex);
+								  
+								  function plusDivs(n) {
+									showDivs(slideIndex += n);
+								  }
+								  
+								  function showDivs(n) {
+									var i;
+									var x = document.getElementsByClassName("mySlides");
+									if (n > x.length) {slideIndex = 1}
+									if (n < 1) {slideIndex = x.length}
+									for (i = 0; i < x.length; i++) {
+									  x[i].style.display = "none";  
+									}
+									x[slideIndex-1].style.display = "block";  
+								  }
+								  </script>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="slider_services">
+				
+				<div class="container">
+					<h2>Destinos</h2>
+					<p class="sub_text">Elige lugares nacional o internacionales</p>
+
+					<div id="service_slider" class="splide">
+				
+						<div class="splide__track">
+							<ul class="splide__list">
+								
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/egipto.jpg">	
+									</div>
+									<p>Egipto</p>
+									
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/bali2.jpg">
+									</div>
+									<p>Bali</p>
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/tailandia.png">
+									</div>
+									<p>Tailandia</p>
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/big-ben.jpg">
+									</div>
+									<p>Londres</p>
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/crucero.jpeg">
+									</div>
+									<p>Crucero</p>
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/disney.jpg">
+									</div>
+									<p>Disneyland</p>
+								</li>
+
+							</ul>
+						</div>
+						
+					</div>
+					<div class="line"></div>
+				</div>
+			</section>
+
+			<!-- SECTION FORM -->
+
+			<section id="form">
+				<div class="container">
+					<h2>Escríbenos</h2>
+					<p class="sub_text">Habla con uno de nuestros profesionales</p>
+					<p class="sub_text">¡Estás a un paso de comenzar tu viaje</p>
+
+					<div id="form_box">
+
+						<div id="form_text">
+							<h3>Completa tus datos</h3>
+							<form action="">
+								<div id="datos">
+									<input type="text" id="nombre" placeholder="Nombre:">
+									<input type="text" id="apellido_1" placeholder="Primer apellido:">
+									<input type="text" id="apellido_2" placeholder="Segundo apellido:">
+									<input type="text" id="dni" placeholder="DNI:">
+									<input type="text" id="phone" placeholder="Teléfono:">
+									<input type="email" id="email" placeholder="Email:">
+								</div>
+								
+								<div id="precio_pago"></div>		
+								
+								<div id="terms_box">
+									<input type="checkbox" id="terminos" class="">
+									<label for="terminos">Acepto los <a href="#"> terminos y condiciones</a></label>
+								</div>
+
+								<div id="btn_registro">
+									<input type="submit" value="Registro" id="btn_form">
+								</div>
+
+							</form>
+						</div>
+						
+						<div id="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d96041.41679043073!2d1.452857391242633!3d41.215357181838456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x12a38b3b4e2762ab%3A0xf9ffb42c69605d64!2sAv.%20del%20Camp%20d&#39;Esports%2C%2036-38%2C%2043700%20El%20Vendrell%2C%20Tarragona!3m2!1d41.215328!2d1.5230896999999999!5e0!3m2!1ses!2ses!4v1689090318241!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+
+		</main>
+
+		<footer id="footer_container">
+			<div class="container">
+
+				<div id="footer_container_box">
+					<div id="contacto">
+						<h3>Contacto</h3>
+						<div>
+							<i class="fa-solid fa-phone"></i>
+							<span>+34 123 45 67 89</span>
+						</div>
+						<div>
+							<i class="fa-solid fa-envelope"></i>
+							<span>toptravel@demo.com</span>
+						</div>
+						<div>
+							<i class="fa-solid fa-location-dot"></i>
+							<span>Av. del Camp d'Esports, 36-38, 43700 El Vendrell, Tarragona</span>
+						</div>
+						<div>
+							<i class="fa-solid fa-clock"></i>
+							<span>Lun a Vie 9 a 22hs. Sáb 10 a 14hs.</span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div id="demo_box">
+				<p>© 1996-2023 Oscar Luna | All rights reserved</p>
+			</div>
+
+		</footer>
+
+	</div>
+
+
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+	<script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+
+
+	<script>
+	  document.addEventListener( 'DOMContentLoaded', function () {
+
+
+	    /* Slider general */
+	    var splide_image = new Splide( '#image_slider', {
+	    	type   : 'loop',
+	    	perPage: 1,
+			autoplay: true,
+			interval: 5000,
+	    } );
+	    splide_image.mount();
+
+	    /* Slider servicios */
+	    var splide_service = new Splide( '#service_slider', {
+	    	type   : 'loop',
+	    	perPage: 4,
+			gap:'20px',
+	    	breakpoints: {
+	    		575: {
+	    			perPage: 1,
+	    		},
+	    		767: {
+	    			perPage: 2,
+	    		},
+	    		1199: {
+	    			perPage: 3,
+	    		},
+	    	},
+	    } );
+	    splide_service.mount();
+	  } );
+	</script>
+
+
+	<script src="js/burger.js"></script>
+	<script src="js/tarifas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+i {
+  font-style: normal;
+}
+
+#footer_container_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #contacto {
+    div {
+      padding-bottom: 20px;
+    }
+  }
+
+  #partners {
+    h5 {
+      text-align: center;
+    }
+
+    #logos_partners {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 20px;
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+#demo_box {
+  text-align: center;
+  padding: 20px 0;
+  background: $color_4;
+  color: white;
+}
+
+@include mix_tablet {
+  #footer_container_box {
+    flex-direction: row;
+    justify-content: space-between;
+
+    #partners {
+      #logos_partners {
+        flex-direction: column;
+      }
+    }
+  }
+}

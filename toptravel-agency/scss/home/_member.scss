@@ -1,0 +1,63 @@
+section {
+  #slider_services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  #info {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #bed1b0;
+  }
+}
+
+h4 {
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+#member_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+
+  #basic,
+  #premium {
+    flex: 1;
+    background-color: $color_3;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    .button_member {
+      margin-top: auto;
+    }
+  }
+
+  .header_member {
+    background-color: $color_secundario;
+  }
+
+  .body_member {
+    p {
+      text-align: center;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      padding-top: 40px;
+    }
+
+    .text_price {
+      padding: 40px;
+    }
+  }
+}
+
+@include mix_tablet {
+  #member_box {
+    flex-direction: row;
+  }
+}
